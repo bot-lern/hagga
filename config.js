@@ -43,7 +43,7 @@ module.exports = {
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.]' : process.env.HANDLERS,
     MENUTEXT: process.env.MENU_TEXT === undefined ?'*RAVANA💢*' : process.env.MENU_TEXT,
-    MENU_LOGO: process.env.MENU_LOGO === undefined ?  'https://github.com/RAVANA-SL/slRavana/blob/master/IMG-20210717-WA0045-01.png'  : process.env.MENU_LOGO,
+    MENU_LOGO: process.env.MENU_LOGO === undefined ?  'https://github.com/RAVANA-SL/slRavana/blob/master/IMG-20210717-WA0045-01.png' : process.env.MENU_LOGO,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     HEROKU: {
