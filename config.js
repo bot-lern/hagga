@@ -25,7 +25,7 @@ module.exports = {
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
-    ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ?  'https://github.com/RAVANA-SL/slRavana/blob/master/IMG-20210717-WA0045-01.png' : process.env.ALIVE_LOGO,
+    ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ?  'https://github.com/Agent34567/hagga/blob/master/IMG-20210717-WA0045-01.jpeg' : process.env.ALIVE_LOGO,
     GIF_WEL: process.env.GIF_WEL === undefined ? 'https://telegra.ph/file/4ce438f1111969bdd9df1.mp4' : process.env.GIF_WEL,
     GIF_BYE: process.env.GIF_BYE === undefined ? 'https://telegra.ph/file/913e1025377cd11246775.gif' : process.env.GIF_BYE,
     CAPTION_KEY: process.env.CAPTION_KEY === undefined ?'Made by RAVANA' : process.env.CAPTION_KEY,
@@ -43,7 +43,7 @@ module.exports = {
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.]' : process.env.HANDLERS,
     MENUTEXT: process.env.MENU_TEXT === undefined ?'*RAVANA💢*' : process.env.MENU_TEXT,
-    MENU_LOGO: process.env.MENU_LOGO === undefined ?  'https://github.com/RAVANA-SL/slRavana/blob/master/IMG-20210717-WA0045-01.png' : process.env.MENU_LOGO,
+    MENU_LOGO: process.env.MENU_LOGO === undefined ?  'https://github.com/Agent34567/hagga/blob/master/IMG-20210717-WA0045-01.jpeg' : process.env.MENU_LOGO,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     HEROKU: {
