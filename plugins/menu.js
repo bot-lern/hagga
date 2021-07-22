@@ -3,7 +3,7 @@ const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 
-Asena.addCommand({pattern: 'ravana', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({pattern: 'menu', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
 
   var image = await axiosget(`Config.MENU_LOGO`, {responseType: 'arraybuffer'})
 
