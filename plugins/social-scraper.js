@@ -20,7 +20,7 @@ if (cn.WORKTYPE == 'private') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=6ffb0caa0165c0e6`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
@@ -39,27 +39,23 @@ if (cn.WORKTYPE == 'private') {
         });
 
     }));
+
+    /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
-
         const userName = match[1]
-
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
-
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
-
         await axios
-          .get(`https://api.xteam.xyz/dl/tiktok?url==${userName}&APIKEY=6ffb0caa0165c0e6`)
+          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
           .then(async (response) => {
             const {
               data,
             } = response.data
-
             const profileBuffer = await axios.get(data.mp4, {
               responseType: 'arraybuffer',
             })
-
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by RAVANA',
+              caption: 'Made by WhatsAsena',
             })
           })
           .catch(
@@ -76,7 +72,7 @@ else if (cn.WORKTYPE == 'public') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=6ffb0caa0165c0e6`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
@@ -100,7 +96,7 @@ else if (cn.WORKTYPE == 'public') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=6ffb0caa0165c0e6`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
@@ -119,27 +115,22 @@ else if (cn.WORKTYPE == 'public') {
         });
 
     }));
+    /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
-
         const userName = match[1]
-
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
-
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
-
         await axios
-          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=6ffb0caa0165c0e6`)
+          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
           .then(async (response) => {
             const {
               server_1,
             } = response.data
-
             const profileBuffer = await axios.get(server_1, {
               responseType: 'arraybuffer',
             })
-
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by RAVANA',
+              caption: 'Made by WhatsAsena',
             })
           })
           .catch(
@@ -148,26 +139,20 @@ else if (cn.WORKTYPE == 'public') {
       },
     )
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
-
         const userName = match[1]
-
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
-
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
-
         await axios
-          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=6ffb0caa0165c0e6`)
+          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
           .then(async (response) => {
             const {
               data,
             } = response.data
-
             const profileBuffer = await axios.get(data.mp4, {
               responseType: 'arraybuffer',
             })
-
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by RAVANA',
+              caption: 'Made by WhatsAsena',
             })
           })
           .catch(
