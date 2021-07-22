@@ -12,7 +12,7 @@ Asena.addCommand({pattern: 'ravana', fromMe: false, desc: Lang.WP}, (async (mess
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.MENUTEXT})
 
 
-*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA BOT MENU*\n'+Config.MENUTEXT+'\n*╚═══❖═══▣ ▣════❖═══╝*
+`*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA BOT MENU*\n'+Config.MENUTEXT+'\n*╚═══❖═══▣ ▣════❖═══╝*
 
 
 ※‗‗‗‗‗‗‗*Media commands*‗‗‗‗‗‗‗‗※
@@ -141,6 +141,8 @@ Asena.addCommand({pattern: 'ravana', fromMe: false, desc: Lang.WP}, (async (mess
 *╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA MENU*\n'+Config.MENUTEXT+'\n*╚═══❖═══▣ ▣════❖═══╝*
 🟦🟨🟩🟦🟨🟩🟦🟨🟩🟦🟨🟩
 
-`}) 
+`})
 
-}));
+);
+
+
