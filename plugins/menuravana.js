@@ -1,6 +1,6 @@
 /*
 # SlRavana
-*/
+
 
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
@@ -18,3 +18,4 @@ Asena.addCommand({pattern: 'ravana', fromMe: false, desc: Lang.WP}, (async (mess
     }));
 
 }
+*/
