@@ -5,9 +5,9 @@ const Config = require('../config');
 
 Asena.addCommand({pattern: 'ravana', fromMe: false,dontAddCommandList: true }, (async (message, match) => {
 
-  var image = await axios.get (Config.MENU_LOGO, {responseType: 'arraybuffer'})
+  var image = await axiosget(`Config.MENU_LOGO`, {responseType: 'arraybuffer'})
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption:`*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA BOT MENU* \n Config.MENUTEXT \n *╚═══❖═══▣ ▣════❖═══╝*
+  await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption:`*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA BOT MENU*\n*╚═══❖═══▣ ▣════❖═══╝*
 
 
 ※‗‗‗‗‗‗‗*Media commands*‗‗‗‗‗‗‗‗※
@@ -133,7 +133,7 @@ Asena.addCommand({pattern: 'ravana', fromMe: false,dontAddCommandList: true }, (
 🔹𝙐𝙨𝙚➜ Logo ලාංඡන විධාන ලබා ගන්න
 
 
-*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA MENU*\n Config.MENUTEXT \n*╚═══❖═══▣ ▣════❖═══╝*
+*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA MENU*\n*╚═══❖═══▣ ▣════❖═══╝*
 🟦🟨🟩🟦🟨🟩🟦🟨🟩🟦🟨🟩
                               
 `}) 
