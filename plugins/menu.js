@@ -7,30 +7,15 @@ const Lang = Language.getString('wallpaper');
 
 Asena.addCommand({pattern: 'ravana', fromMe: false, desc: Lang.WP}, (async (message, match) => {
 
-    var r_text = new Array ();
-    
-    
-    r_text[0] = "https://telegra.ph/file/4fa0c1622b2976d67c3b4.jpg";
-    r_text[1] = "https://telegra.ph/file/4fa0c1622b2976d67c3b4.jpg";
-    r_text[2] = "https://telegra.ph/file/4fa0c1622b2976d67c3b4.jpg";
-    r_text[3] = "https://telegra.ph/file/4fa0c1622b2976d67c3b4.jpg";
-    r_text[4] = "https://telegra.ph/file/4fa0c1622b2976d67c3b4.jpg";
-    r_text[5] = "https://telegra.ph/file/4fa0c1622b2976d67c3b4.jpg";
-    
-        
-     var i = Math.floor(6*Math.random())
+  var image = await axios.get (Config.MENU_LOGO, {responseType: 'arraybuffer'})
 
-    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `⚡━━━━━💢RAVANA 3.0💢━━━━━⚡
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.MENUTEXT})
 
 
-Hi This is RAVANA 3.0 Bot this is my commands
-============RAVANA 3.0(.)============
+*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA BOT MENU*\n'+Config.MENUTEXT+'\n*╚═══❖═══▣ ▣════❖═══╝*
 
-💠💠💠💠💠💠💠💠💠💠💠💠
 
-💥 *𝙈𝙚𝙙𝙞𝙖 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨* 💥
+※‗‗‗‗‗‗‗*Media commands*‗‗‗‗‗‗‗‗※
 
 🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜ .song <පෙළow>
 🔹𝙐𝙨𝙚➜ ඔබ වෙනුවෙන් ගීතය බාගත කරයි..
@@ -127,7 +112,7 @@ Hi This is RAVANA 3.0 Bot this is my commands
 
 💠💠💠💠💠💠💠💠💠💠💠💠
 
-🌌 *𝙎𝙩𝙞𝙘𝙠𝙚𝙧 𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨* 🌌
+※‗‗‗‗‗‗‗*Sticker commands*‗‗‗‗‗‗‗‗※
 
 🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜ .sticker 
 🔹𝙐𝙨𝙚➜ img / gif ස්ටිකරයක් බවට පරිවර්තනය කරයි.
@@ -141,7 +126,7 @@ Hi This is RAVANA 3.0 Bot this is my commands
 
 💠💠💠💠💠💠💠💠💠💠💠💠
 
-💢Logo  Commands💢
+※‗‗‗‗‗‗‗*Logo packs commands*‗‗‗‗‗‗‗‗※
 
 🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜ .txttiomg
 🔹𝙐𝙨𝙚➜ Logo ලාංඡන විධාන ලබා ගන්න
@@ -149,8 +134,11 @@ Hi This is RAVANA 3.0 Bot this is my commands
 🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜ .rpack
 🔹𝙐𝙨𝙚➜ Logo ලාංඡන විධාන ලබා ගන්න
 
+🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜ .rnpack
+🔹𝙐𝙨𝙚➜ Logo ලාංඡන විධාන ලබා ගන්න
 
-═════💢RAVANA 3.0💢═════
+
+*╔═▣═══❖⦁⦁⦁💢⦁⦁⦁❖═══▣═╗*\n*RAVANA MENU*\n'+Config.MENUTEXT+'\n*╚═══❖═══▣ ▣════❖═══╝*
 🟦🟨🟩🟦🟨🟩🟦🟨🟩🟦🟨🟩
 
 `}) 
