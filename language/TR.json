@@ -1,9 +1,9 @@
 {
     "__ASENAJSON__": true,
-    "LANGUAGE": "English",
-    "LANGCODE": "en",
+    "LANGUAGE": "Türkçe",
+    "LANGCODE": "tr",
     "AUTHOR": "AsenaDev",
-    "STRINGS": {
+    "STRINGS": { 
         "_asena": {
             "COMMAND": "Command",
             "DESC": "Description",
