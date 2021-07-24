@@ -100,9 +100,9 @@ if (Config.WORKTYPE == 'public') {
 
     }));
 }
-else if (Config.WORKTYPE == 'public') {
+else if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'anime', fromMe: false, desc: Lang.AN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: true,dontAddCMDList: true }, (async (message, match) => {
 
     var r_text = new Array ();
 
