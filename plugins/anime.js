@@ -6,9 +6,9 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('anime');
 
-if (Config.WORKTYPE == 'private') {
+if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'anime', fromMe: true, desc: Lang.AN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'anime', fromMe: false,dontAddCMDList: true }, (async (message, match) => {
 
     var r_text = new Array ();
 
