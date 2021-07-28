@@ -42,6 +42,7 @@ module.exports = {
     BANMSG: process.env.BAN_MESSAGE === undefined ? 'default' : process.env.BAN_MESSAGE,
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.]' : process.env.HANDLERS,
+    XTEAM_API: process.env.MENU_TEXT === undefined ?'5bd33b276d41d6b4' : process.env.XTEAM_API,
     MENUTEXT: process.env.MENU_TEXT === undefined ?'*RAVANA💢*' : process.env.MENU_TEXT,
     MENU_LOGO: process.env.MENU_LOGO === undefined ?  'https://github.com/Agent34567/hagga/blob/master/IMG-20210717-WA0045-01.jpeg' : process.env.MENU_LOGO,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
