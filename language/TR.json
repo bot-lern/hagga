@@ -4,7 +4,7 @@
     "LANGCODE": "tr",
     "AUTHOR": "AsenaDev",
     "STRINGS": { 
-        "_asena": {
+        "_ravana": {
             "COMMAND": "Command",
             "DESC": "Description",
             "EXAMPLE": "Example",
