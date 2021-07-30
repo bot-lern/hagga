@@ -42,7 +42,7 @@ await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), Mess
         topText = split[0];
 }
 
-var webimage = await axios.get(`https://api.xteam.xyz/textpro/skeleton?text=${encodeURIComponent(match[1])}&APIKEY=5bd33b276d41d6b4`, { responseType: 'arraybuffer' })
+var webimage = await axios.get(`https://api.xteam.xyz/textpro/skeleton?text=${encodeURIComponent(match[1])}&APIKEY=${Config.XTEAM_API}`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: Config.CAPTION_KEY})
 
