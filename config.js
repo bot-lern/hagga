@@ -45,6 +45,7 @@ module.exports = {
     MENUTEXT: process.env.MENU_TEXT === undefined ?'*RAVANA💢*' : process.env.MENU_TEXT,
     MENU_LOGO: process.env.MENU_LOGO === undefined ?  'https://github.com/Agent34567/hagga/blob/master/IMG-20210717-WA0045-01.jpeg' : process.env.MENU_LOGO,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
+    ZEKS_API: process.env.ZEKS_API === undefined ? 'cjxJIn9eDletRHac3CG6CdvGxFH' : process.env.ZEKS_API,
     BRANCH: 'master',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
