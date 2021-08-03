@@ -25,11 +25,11 @@ RAVANA.addCommand({pattern: '2', fromMe: false, dontAddCommandList: true}, (asyn
 }));
 RAVANA.addCommand({pattern: '3', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-    await message.sendMessage("*ඔබේ alive එක වැඩ නොකර නේ ඔබ alive logo එක වෙනස් කර ඒ ලින්ක් එක වැරදි\n\nහරියට ලින්ක් එක ගන්න\nසයිට් එක telegra.ph\n\n 🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+    await message.sendMessage("*ඔබේ alive එක වැඩ නොකර නේ ඔබ alive logo එක වෙනස් කර ඒ ලින්ක් එක වැරදි*\n\nහරියට ලින්ක් එක ගන්න\nසයිට් එක telegra.ph\n\n 🥰Thank you for using RAVANA HELP CENTER🇱🇰");
 
 }));
 RAVANA.addCommand({pattern: '4', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-    await message.sendMessage("ඔබ බොට්ව shutdown කරවිට ඔබ heroku එකට ගොස් නැවතත් Resources key එක on කර යුතුයි.\n\n🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+    await message.sendMessage("*ඔබ බොට්ව shutdown කරවිට ඔබ heroku එකට ගොස් නැවතත් Resources key එක on කර යුතුයි.*\n\n🥰Thank you for using RAVANA HELP CENTER🇱🇰");
 
 }));
