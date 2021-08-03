@@ -20,6 +20,16 @@ RAVANA.addCommand({pattern: '1', fromMe: false, dontAddCommandList: true}, (asyn
 }));
 RAVANA.addCommand({pattern: '2', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
-    await message.sendMessage("*එය අපගේ ප්‍රශ්නයක් නොවේ එය ලොගෝ සයිට් එකේ ලිමිට් එක නිසා* \n\nදැන් එයට විසදුමක් ඇත .\n\n```ඔයාලට පුලුවන් ඒ ලොගෝ api වෙනස් කිරීමට ´´´\n\n.setvar XTEAM_API:ඔයාල ගත්ත api එක \n\n .setvar LOLUHUMAN_API:ඔයාල ගත්ත api එක \n\n\nඔය api ගන්න ක්‍රමේ මෙම වීඩියෝ එකේ ඇත.\n https://youtu.be/vGHpome5e3k\n\n\n 🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+    await message.sendMessage("*එය අපගේ ප්‍රශ්නයක් නොවේ එය ලොගෝ සයිට් එකේ ලිමිට් එක නිසා* \n\nදැන් එයට විසදුමක් ඇත .\n\n```ඔයාලට පුලුවන් ඒ ලොගෝ api වෙනස් කිරීමට ```\n\n.setvar XTEAM_API:ඔයාල ගත්ත api එක \n\n .setvar LOLUHUMAN_API:ඔයාල ගත්ත api එක \n\n\nඔය api ගන්න ක්‍රමේ මෙම වීඩියෝ එකේ ඇත.\n https://youtu.be/vGHpome5e3k\n\n\n 🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+
+}));
+RAVANA.addCommand({pattern: '3', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    await message.sendMessage("*ඔබේ alive එක වැඩ නොකර නේ ඔබ alive logo එක වෙනස් කර ඒ ලින්ක් එක වැරදි\n\nහරියට ලින්ක් එක ගන්න\nසයිට් එක telegra.ph\n\n 🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+
+}));
+RAVANA.addCommand({pattern: '4', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    await message.sendMessage("ඔබ බොට්ව shutdown කරවිට ඔබ heroku එකට ගොස් නැවතත් Resources key එක on කර යුතුයි.\n\n🥰Thank you for using RAVANA HELP CENTER🇱🇰");
 
 }));
