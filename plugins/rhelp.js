@@ -33,3 +33,13 @@ RAVANA.addCommand({pattern: '4', fromMe: false, dontAddCommandList: true}, (asyn
     await message.sendMessage("*ඔබ බොට්ව shutdown කරවිට ඔබ heroku එකට ගොස් නැවතත් Resources key එක on කර යුතුයි.*\n\n🥰Thank you for using RAVANA HELP CENTER🇱🇰");
 
 }));
+RAVANA.addCommand({pattern: '5', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    await message.sendMessage("*ඒකට කරන්න තියෙන්නේ ඔයා ආයේ heroku එකට ගිහින් more එක ඔබලා restart all dyno ඔබන්න.වෙනත් ප්‍රශ්නයක්නම් හෙරොකු එකේ log එකේ ss එකක් අපේ suppoted group එකට දාන්න.*\n\n🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+
+}));
+RAVANA.addCommand({pattern: '6', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+    await message.sendMessage("*ප්‍රශ්නය අපගේ whatsapp supposed group https://chat.whatsapp.com/BZxwFPt5pUe19Y4EW9DjDP එක තුලට හෝ මෙම නම්බර් එකට දාන්න wa.me/94756872976*\n\n🥰Thank you for using RAVANA HELP CENTER🇱🇰");
+
+}));
