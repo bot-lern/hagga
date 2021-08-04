@@ -1,3 +1,4 @@
+/*
 const Asena = require('../events');
 const axios = require('axios');
 const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
@@ -313,4 +314,5 @@ Asena.addCommand({pattern: 'capcut', fromMe: false, dontAddCommandList: true}, (
     Asena.addCommand({pattern: 'vm', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
       await message.sendMessage('💎 *Vidmate* 💎\Vidmate.\n📌 https://bit.ly/3Aoyl24');
    }));
-}
+}*/
+
