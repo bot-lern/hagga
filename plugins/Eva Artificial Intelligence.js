@@ -1,4 +1,4 @@
-const Asena = require('../events');
+const RAVANA = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -21,16 +21,16 @@ let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
 
 let wk = conf.WORKTYPE == 'public' ? false : true
 var vtalk_dsc = ''
-var reply_eva = ''
-if (conf.LANG == 'TR') vtalk_dsc = 'Eva sesli sohbetini başlatır.', reply_eva = '*Herhangi Bir Sesli Mesaja Yanıt Verin!*'
-if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Eva voice chat.', reply_eva = '*Reply to Any Voice Message!*'
-if (conf.LANG == 'AZ') vtalk_dsc = 'Eva səsli söhbətinə başlayır.', reply_eva = '*Hər hansı bir səsli mesaja cavab verin!*'
-if (conf.LANG == 'PT') vtalk_dsc = 'Começa o bate-papo por voz de Eva.', reply_eva = '*Responder a qualquer mensagem de voz!*'
-if (conf.LANG == 'RU') vtalk_dsc = 'Запускает голосовой чат Eva.', reply_eva = '*Ответьте на любое голосовое сообщение!*'
-if (conf.LANG == 'HI') vtalk_dsc = 'Eva ध्वनि चैट प्रारंभ करता है', reply_eva = '*किसी भी ध्वनि संदेश का उत्तर दें!*'
-if (conf.LANG == 'ES') vtalk_dsc = 'Comienza con el chat de voz de Eva.', reply_eva = '*¡Responde a cualquier mensaje de voz!*'
-if (conf.LANG == 'ML') vtalk_dsc = 'Eva വോയ്‌സ് ചാറ്റിലേക്ക് ആരംഭിക്കുന്നു.', reply_eva = '*ഏത് വോയ്‌സ് സന്ദേശത്തിനും മറുപടി നൽകുക!*'
-if (conf.LANG == 'ID') vtalk_dsc = 'Mulai obrolan suara Eva.', reply_eva = '*Balas Pesan Suara Apapun!*'
+var reply_Astro = ''
+if (conf.LANG == 'TR') vtalk_dsc = 'Astro sesli sohbetini başlatır.', reply_Astro = '*Herhangi Bir Sesli Mesaja Yanıt Verin!*'
+if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Astro voice chat.', reply_Astro = '*Reply to Any Voice Message!*'
+if (conf.LANG == 'AZ') vtalk_dsc = 'Astro səsli söhbətinə başlayır.', reply_Astro = '*Hər hansı bir səsli mesaja cavab verin!*'
+if (conf.LANG == 'PT') vtalk_dsc = 'Começa o bate-papo por voz de Astro.', reply_Astro = '*Responder a qualquer mensagem de voz!*'
+if (conf.LANG == 'RU') vtalk_dsc = 'Запускает голосовой чат Astro.', reply_Astro = '*Ответьте на любое голосовое сообщение!*'
+if (conf.LANG == 'HI') vtalk_dsc = 'Astro ध्वनि चैट प्रारंभ करता है', reply_Astro = '*किसी भी ध्वनि संदेश का उत्तर दें!*'
+if (conf.LANG == 'ES') vtalk_dsc = 'Comienza con el chat de voz de Astro.', reply_Astro = '*¡Responde a cualquier mensaje de voz!*'
+if (conf.LANG == 'ML') vtalk_dsc = 'Astro വോയ്‌സ് ചാറ്റിലേക്ക് ആരംഭിക്കുന്നു.', reply_Astro = '*ഏത് വോയ്‌സ് സന്ദേശത്തിനും മറുപടി നൽകുക!*'
+if (conf.LANG == 'ID') vtalk_dsc = 'Mulai obrolan suara Astro.', reply_Astro = '*Balas Pesan Suara Apapun!*'
 
 const recognizeAudio = () => {
     const headers = new Headers({
@@ -55,14 +55,14 @@ const convertToWav = file => {
         .save('output.wav')
 }
 
-Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Eva') && conf.FULLEVA !== 'true') {        
+RAVANA.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+    if (message.message.startsWith('Astro') && conf.FULLAstro !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
-        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+        let acc = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0] == 'RAVANA' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
-        var finm = message.message.replace('Eva', '').replace(' ', '')   
-        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-        if (ainame !== 'Asena') return;
+        var finm = message.message.replace('Astro', '').replace(' ', '')   
+        var ainame = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0]
+        if (ainame !== 'RAVANA') return;
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
         if (ldet[0][0] !== 'english') {
@@ -84,17 +84,17 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
         })
     }
 }));
-Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (conf.FULLEVA == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+RAVANA.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+        if (conf.FULLAstro == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
                         var unique_ident = message.client.user.jid.split('@')[0]      
-                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                        let acc = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0] == 'RAVANA' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
-                        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                        if (ainame !== 'Asena') return;
+                        var ainame = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0]
+                        if (ainame !== 'RAVANA') return;
                         var finm = message.message
                         var ldet = lngDetector.detect(finm)
                         var trmsg = ''
@@ -120,9 +120,9 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             } else if (message.jid.includes('-') && message.reply_message !== false) {
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     var unique_ident = message.client.user.jid.split('@')[0]      
-                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                    var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                    if (ainame !== 'Asena') return;
+                    let acc = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0] == 'RAVANA' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                    var ainame = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0]
+                    if (ainame !== 'RAVANA') return;
                     var finm = message.message
                     var ldet = lngDetector.detect(finm)
                     var trmsg = ''
@@ -146,9 +146,9 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                 }
             } else {
                 var unique_ident = message.client.user.jid.split('@')[0]      
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                if (ainame !== 'Asena') return;
+                let acc = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0] == 'RAVANA' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                var ainame = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0]
+                if (ainame !== 'RAVANA') return;
                 var finm = message.message
                 var ldet = lngDetector.detect(finm)
                 var trmsg = ''
@@ -173,8 +173,8 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
         }
 
 }));
-Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
-    if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
+RAVANA.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
+    if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_Astro, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -194,9 +194,9 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
                     ssc = ceviri.text
                 }
                 var unique_ident = message.client.user.jid.split('@')[0]
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
-                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                if (ainame !== 'Asena') return;
+                let acc = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0] == 'RAVANA' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
+                var ainame = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0]
+                if (ainame !== 'RAVANA') return;
         
                 var son = encodeURI(ssc)
                 await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + son).then(async (response) => {
@@ -222,98 +222,98 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
         });
     } catch (err) { console.log(err) }
 }));
-var fulleva_dsc = ''
+var fullAstro_dsc = ''
 var already_on = ''
 var already_off = ''
 var succ_on = ''
 var succ_off = ''
 if (conf.LANG == 'TR') {
-    fulleva_dsc = 'Tam fonksiyonel Eva özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
-    already_on = 'Eva yapay zekası halihazırda tüm fonksiyonları etkin.'
-    already_off = 'Eva yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
-    succ_on = 'Eva, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
-    succ_off = 'Eva, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
+    fullAstro_dsc = 'Tam fonksiyonel Astro özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
+    already_on = 'Astro yapay zekası halihazırda tüm fonksiyonları etkin.'
+    already_off = 'Astro yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
+    succ_on = 'Astro, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
+    succ_off = 'Astro, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
 }
 if (conf.LANG == 'EN') {
-    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
-    already_on = 'Eva artificial intelligence is already fully functional.'
-    already_off = 'Eva artificial intelligence is currently running semi-functional.'
-    succ_on = 'Eva Opened Fully Functionally! Please wait a bit! ✅'
-    succ_off = 'Eva Set to Semi-Functional! Please wait a bit! ☑️'
+    fullAstro_dsc = 'Activates full functional Astro features. Turn your account into a ai chatbot!'
+    already_on = 'Astro artificial intelligence is already fully functional.'
+    already_off = 'Astro artificial intelligence is currently running semi-functional.'
+    succ_on = 'Astro Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Astro Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'AZ') {
-    fulleva_dsc = 'Tam funksional Eva xüsusiyyətlərini aktivləşdirir. Hesabınızı bir chatbot halına gətirin!'
-    already_on = 'Eva süni intellekt onsuz da tam işlək vəziyyətdədir.'
-    already_off = 'Eva AI hazırda yarı funksionaldır.'
-    succ_on = 'Eva Tamamilə İşlədi! Xahiş edirəm bir az gözləyin! ✅'
-    succ_off = 'Eva Yarı İşləkdir! Xahiş edirəm bir az gözləyin! ☑️'
+    fullAstro_dsc = 'Tam funksional Astro xüsusiyyətlərini aktivləşdirir. Hesabınızı bir chatbot halına gətirin!'
+    already_on = 'Astro süni intellekt onsuz da tam işlək vəziyyətdədir.'
+    already_off = 'Astro AI hazırda yarı funksionaldır.'
+    succ_on = 'Astro Tamamilə İşlədi! Xahiş edirəm bir az gözləyin! ✅'
+    succ_off = 'Astro Yarı İşləkdir! Xahiş edirəm bir az gözləyin! ☑️'
 }
 if (conf.LANG == 'RU') {
-    fulleva_dsc = 'Активирует полнофункциональные функции Eva. Превратите свой аккаунт в чат-бота!'
-    already_on = 'Искусственный интеллект Eva уже полностью функционален.'
-    already_off = 'Eva AI в настоящее время частично функционирует'
-    succ_on = 'Eva открылась полностью функционально! Подождите немного! ✅'
-    succ_off = 'Eva настроена на полуфункциональность! Подождите немного! ☑️'
+    fullAstro_dsc = 'Активирует полнофункциональные функции Astro. Превратите свой аккаунт в чат-бота!'
+    already_on = 'Искусственный интеллект Astro уже полностью функционален.'
+    already_off = 'Astro AI в настоящее время частично функционирует'
+    succ_on = 'Astro открылась полностью функционально! Подождите немного! ✅'
+    succ_off = 'Astro настроена на полуфункциональность! Подождите немного! ☑️'
 }
 if (conf.LANG == 'ES') {
-    fulleva_dsc = 'Activa todas las funciones funcionales de Eva. ¡Convierta su cuenta en un chatbot!'
-    already_on = 'La inteligencia artificial de Eva ya es completamente funcional.'
-    already_off = 'Eva AI es actualmente semi-funcional.'
-    succ_on = '¡Eva abrió completamente funcionalmente! ¡Por favor espere un poco! ✅'
-    succ_off = '¡Eva se pone semifuncional! ¡Por favor espere un poco! ☑️'
+    fullAstro_dsc = 'Activa todas las funciones funcionales de Astro. ¡Convierta su cuenta en un chatbot!'
+    already_on = 'La inteligencia artificial de Astro ya es completamente funcional.'
+    already_off = 'Astro AI es actualmente semi-funcional.'
+    succ_on = '¡Astro abrió completamente funcionalmente! ¡Por favor espere un poco! ✅'
+    succ_off = '¡Astro se pone semifuncional! ¡Por favor espere un poco! ☑️'
 }
 if (conf.LANG == 'HI') {
-    fulleva_dsc = 'पूरी तरह कार्यात्मक Eva सुविधाओं को सक्रिय करता है। अपने खाते को चैटबॉट में बदलें!'
+    fullAstro_dsc = 'पूरी तरह कार्यात्मक Astro सुविधाओं को सक्रिय करता है। अपने खाते को चैटबॉट में बदलें!'
     already_on = 'ईवा आर्टिफिशियल इंटेलिजेंस पहले से ही पूरी तरह कार्यात्मक है'
     already_off = 'ईवा एआई वर्तमान में अर्ध-कार्यात्मक है'
     succ_on = 'ईवा पूरी तरह कार्यात्मक रूप से खुल गई! कृपया थोड़ी प्रतीक्षा करें! ✅'
     succ_off = 'अर्ध-कार्यात्मक करने के लिए ईवा सेट! कृपया थोड़ी प्रतीक्षा करें! ☑️'
 }
 if (conf.LANG == 'ML') {
-    fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ Eva സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
+    fullAstro_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ Astro സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
     already_on = 'ഇവ കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
     already_off = 'ഇവാ AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
     succ_on = 'ഇവ പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
     succ_off = 'സെമി-ഫങ്ഷണൽ ആയി ഇവാ സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 if (conf.LANG == 'PT') {
-    fulleva_dsc = 'Ativa recursos Eva totalmente funcionais. Transforme sua conta em um chatbot!'
-    already_on = 'A inteligência artificial Eva já está totalmente funcional.'
-    already_off = 'Eva AI está semi-funcional.'
-    succ_on = 'Eva abriu totalmente funcionalmente! Por favor espere um pouco! ✅'
-    succ_off = 'Eva definida como semi-funcional! Por favor espere um pouco! ☑️'
+    fullAstro_dsc = 'Ativa recursos Astro totalmente funcionais. Transforme sua conta em um chatbot!'
+    already_on = 'A inteligência artificial Astro já está totalmente funcional.'
+    already_off = 'Astro AI está semi-funcional.'
+    succ_on = 'Astro abriu totalmente funcionalmente! Por favor espere um pouco! ✅'
+    succ_off = 'Astro definida como semi-funcional! Por favor espere um pouco! ☑️'
 }
 if (conf.LANG == 'ID') {
-    fulleva_dsc = 'Mengaktifkan fitur Eva yang berfungsi penuh. Ubah akun Anda menjadi chatbot!'
-    already_on = 'Kecerdasan buatan Eva sudah berfungsi penuh.'
-    already_off = 'Eva AI saat ini semi-fungsional.'
-    succ_on = 'Eva Dibuka Sepenuhnya Secara Fungsional! Harap tunggu sebentar! ✅'
-    succ_off = 'Eva Set ke Semi-Fungsional! Mohon tunggu sebentar! ☑️'
+    fullAstro_dsc = 'Mengaktifkan fitur Astro yang berfungsi penuh. Ubah akun Anda menjadi chatbot!'
+    already_on = 'Kecerdasan buatan Astro sudah berfungsi penuh.'
+    already_off = 'Astro AI saat ini semi-fungsional.'
+    succ_on = 'Astro Dibuka Sepenuhnya Secara Fungsional! Harap tunggu sebentar! ✅'
+    succ_off = 'Astro Set ke Semi-Fungsional! Mohon tunggu sebentar! ☑️'
 }
 
-Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.fulleva on / off' }, (async (message, match) => {
-    var eva_status = `${conf.FULLEVA}`
+RAVANA.addCommand({ pattern: 'fullAstro ?(.*)', desc: fullAstro_dsc, fromMe: true, usage: '.fullAstro on / off' }, (async (message, match) => {
+    var Astro_status = `${conf.FULLAstro}`
     if (match[1] == 'on') {
-        if (eva_status == 'true') {
+        if (Astro_status == 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
         }
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['FULL_EVA']: 'true'
+                    ['FULL_Astro']: 'true'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
         }
     }
     else if (match[1] == 'off') {
-        if (eva_status !== 'true') {
+        if (Astro_status !== 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_off + '*', MessageType.text)
         }
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['FULL_EVA']: 'false'
+                    ['FULL_Astro']: 'false'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
