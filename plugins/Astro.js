@@ -56,7 +56,7 @@ const convertToWav = file => {
 }
 
 RAVANA.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Astro') && conf.FULLAstro !== 'true') {        
+    if (message.message.startsWith('Astro') && conf.FULLASTRO !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         let acc = os.userInfo().homedir.split('SL')[1].split('RAVANA/')[0] == 'RAVANA' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
@@ -85,7 +85,7 @@ RAVANA.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
     }
 }));
 RAVANA.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (conf.FULLAstro == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+        if (conf.FULLASTRO == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
@@ -292,7 +292,7 @@ if (conf.LANG == 'ID') {
 }
 
 RAVANA.addCommand({ pattern: 'fullAstro ?(.*)', desc: fullAstro_dsc, fromMe: true, usage: '.fullAstro on / off' }, (async (message, match) => {
-    var Astro_status = `${conf.FULLAstro}`
+    var Astro_status = `${conf.FULLASTRO}`
     if (match[1] == 'on') {
         if (Astro_status == 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
