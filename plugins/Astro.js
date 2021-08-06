@@ -300,7 +300,7 @@ RAVANA.addCommand({ pattern: 'fullAstro ?(.*)', desc: fullAstro_dsc, fromMe: tru
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['FULL_Astro']: 'true'
+                    ['FULL_ASTRO']: 'true'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
@@ -313,7 +313,7 @@ RAVANA.addCommand({ pattern: 'fullAstro ?(.*)', desc: fullAstro_dsc, fromMe: tru
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['FULL_Astro']: 'false'
+                    ['FULL_ASTRO']: 'false'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
