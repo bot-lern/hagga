@@ -74,6 +74,8 @@
         "heroku": {
             "RESTART_DESC": "Restart RAVANA",
             "RESTART_MSG": "```Restarting...```",
+            "BUGSONG_DESC": "If bot media downloading not working. use this command"
+            "BUGSONG_MSG": "*📣 plz waite a moment 👼*"
             "SHUTDOWN_DESC": "Shutdown RAVANA",
             "SHUTDOWN_MSG": "```බොට් ක්‍රියා විරහිත කරන ලදි ⛔```",
             "DYNO_DESC": "ඔබේ heroku dyno use එක check කරනවා",
