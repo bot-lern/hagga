@@ -33,7 +33,7 @@
     "cwebp": "^2.0.5",
     "deepai": "^1.0.17",
     "cwebp-bin": "^6.1.1",
-    "textmaker-jessi": "^1.2.2",
+    "api-jessi": "^1.2.2",
     "tinyurl": "^1.1.7",
     "dotenv": "^8.2.0",
     "exchange-rates-api": "^1.0.2",
