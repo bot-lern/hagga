@@ -165,7 +165,7 @@ Asena.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (a
 
 Asena.addCommand({pattern: 'bugsong', fromMe: true, desc: Lang.BUGSONG_DESC}, (async (message, match) => {
 
-    await message.client.sendMessage(message.jid,Lang.BUGSONG_MSG, quoted: message.data, MessageType.text);
+    await message.client.sendMessage(message.jid,Lang.BUGSONG_MSG, MessageType.text);
     console.log(baseURI);
     await heroku.delete(baseURI + '/dynos').catch(async (error) => {
         await message.client.sendMessage(message.jid,error.message, MessageType.text);
