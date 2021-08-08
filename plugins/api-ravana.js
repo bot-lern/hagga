@@ -439,7 +439,7 @@ Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: '3dneon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -449,7 +449,7 @@ Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tru
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html",
+    jessisapi.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -459,15 +459,15 @@ Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tru
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/aven.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/aven.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/3dneon.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/3dneon.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'metalgalaxy ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -477,7 +477,7 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html",
+    jessisapi.textpro("https://textpro.me/text-logo-3d-metal-galaxy-943.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -487,15 +487,15 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tt2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt2.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/metalgalaxy.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/metalgalaxy.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'metalsilver ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -505,7 +505,7 @@ Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-cool-wall-graffiti-text-effect-online-1009.html",
+    jessisapi.textpro("https://textpro.me/text-logo-3d-metal-silver-946.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -515,8 +515,8 @@ Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ttgra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ttgra.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/metalsilver.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/metalsilver.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -580,8 +580,17 @@ Asena.addCommand({pattern: 'rosegold ?(.*)', fromMe: wk, dontAddCommandList: tru
     });
 }));
 Asena.addCommand({pattern: 'avatargold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
     jessisapi.textpro("https://textpro.me/create-avatar-gold-online-956.html",
-        `${match[1]}`
+        [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
               var download = async(uri, filename, callback) => {
@@ -617,7 +626,7 @@ Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (
           } 
     });
 }));
-Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'luxurymetel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -627,7 +636,7 @@ Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true},
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html",
+    jessisapi.textpro("https://textpro.me/color-full-luxury-metal-text-effect-969.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -637,16 +646,16 @@ Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/space.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/luxurymetel.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/luxurymetel.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-Asena.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
+Asena.addCommand({pattern: 'mtg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.photooxy("https://photooxy.com/other-design/create-metallic-text-glow-online-188.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -656,24 +665,41 @@ Asena.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/smoke.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/mtg.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/mtg.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-Asena.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    var download = async(uri, filename, callback) => {
-        await request.head(uri, async(err, res, body) => {    
-            await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-        });
-    };
-    var uri = encodeURI(match[1])
-    await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/WhatsAsenaDuplicated/glowttp.jpg', async() => {                          
-        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glowttp.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
-    })
+Asena.addCommand({pattern: 'capamarica ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    jessisapi.textpro("https://textpro.me/captain-america-text-effect-905.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/capamarica.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/capamarica.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
 }));
 Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
