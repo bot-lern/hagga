@@ -143,7 +143,7 @@ Asena.addCommand({pattern: 'txttoimg$', fromMe: wk, desc: desc_msg}, (async (mes
     }
     const msg = command_cmd + '```.devil``` \n' + t1 + '_\n' + usage_cmd + '*.devil Ravana*\n\n' +
         command_cmd + '```.bear``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '*.bear Ravana*\n\n' +
-        command_cmd + '```.thunder``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '*.wolf Ra;One*\n\n' +
+        command_cmd + '```.wolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '*.wolf Ra;One*\n\n' +
         command_cmd + '```.neon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '*.neon Ravana*\n\n' +
         command_cmd + '```.2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '*.2neon Ravana*\n\n' +
         command_cmd + '```.3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '*.3neon Ravana*\n\n' +
@@ -153,7 +153,7 @@ Asena.addCommand({pattern: 'txttoimg$', fromMe: wk, desc: desc_msg}, (async (mes
         command_cmd + '```.ninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '*.ninja Ra;One*\n\n' +
         command_cmd + '```.glitter``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '*.glitter Ravana*\n\n' +
         command_cmd + '```.bokeh``` \n' + desc_cmd + t9 + '_\n' + usage_cmd + '*.bokeh Ravana*\n\n' +
-        command_cmd + '```.marvel``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '*.marvel Ra;One*\n\n' +
+        command_cmd + '```.greenhorror``` \n' + desc_cmd + t11 + '_\n' + usage_cmd + '*.marvel Ra;One*\n\n' +
         command_cmd + '```.2marvel``` \n' + desc_cmd + t12 + '_\n' + usage_cmd + '*.2marvel Ra;One*\n\n' +
         command_cmd + '```.avengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '*.avengers Ra;One*\n\n' +
         command_cmd + '```.graf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '*.graf pinky;Ravana*\n\n' +
@@ -223,7 +223,7 @@ Asena.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true
         topText = match[1];
         bottomText = '';
     }
-    jessisapi.textpro("https://textpro.me/thunder-text-effect-online-881.html",
+    jessisapi.textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -233,8 +233,8 @@ Asena.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/thunder.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/thunder.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/wolf.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/wolf.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -393,7 +393,7 @@ Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-logo-style-marvel-studios-online-971.html",
+    jessisapi.textpro("https://textpro.me/create-green-horror-style-text-effect-online-1036.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -403,8 +403,8 @@ Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/marvel.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/marvel.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/greenhorror.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/greenhorror.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
