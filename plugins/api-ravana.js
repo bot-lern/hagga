@@ -590,7 +590,7 @@ Asena.addCommand({pattern: 'avatargold ?(.*)', fromMe: wk, dontAddCommandList: t
         bottomText = 'ㅤ';
     }
     jessisapi.textpro("https://textpro.me/create-avatar-gold-online-956.html",
-        [`${topText}`, `${bottomText}`]
+        [`${match[1]}`]
         ).then(async (data) => { 
           try { 
               var download = async(uri, filename, callback) => {
@@ -673,7 +673,7 @@ Asena.addCommand({pattern: 'mtg ?(.*)', fromMe: wk, dontAddCommandList: true}, (
           } 
     });
 }));
-Asena.addCommand({pattern: 'capamarica ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
