@@ -684,7 +684,7 @@ RAVANA.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: tr
         bottomText = 'ㅤ';
     }
     jessisapi.textpro("https://textpro.me/captain-america-text-effect-905.html",
-        [`${topText}`, `${bottomText}`]
+        `${match[1]}`
         ).then(async (data) => { 
           try { 
               var download = async(uri, filename, callback) => {
@@ -695,6 +695,62 @@ RAVANA.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: tr
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/capamarica.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/capamarica.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+RAVANA.addCommand({pattern: 'magma ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    jessisapi.textpro("https://textpro.me/create-a-magma-hot-text-effect-online-1030.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/magma.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/magma.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+RAVANA.addCommand({pattern: 'layered ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    jessisapi.textpro("https://textpro.me/create-layered-text-effects-online-free-1032.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/layered.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/layered.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -758,8 +814,8 @@ RAVANA.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-RAVANA.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
+RAVANA.addCommand({pattern: 'love ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/love-text-effect-372.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -769,8 +825,8 @@ RAVANA.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: tr
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cmth.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/love.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/love.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
