@@ -161,7 +161,7 @@ RAVANA.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (messa
         command_cmd + '```.transformer``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '*.transformer Ravana*\n\n' +
         command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '*.ice Ravana*\n\n' +
         command_cmd + '```.luxurymetel``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '*.luxurymetel Ra;One*\n\n' +
-        command_cmd + '```.mtg``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '*..mtg Ravana*\n\n.
+        command_cmd + '```.mtg``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '*..mtg Ravana*\n\n' +
         command_cmd + '```.camarica``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '*.camarica Ravana*\n\n' +
         command_cmd + '```.magma``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '*.magma Ravana*\n\n' +
         command_cmd + '```.layered``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '*.layered Ravana*\n\n' +
