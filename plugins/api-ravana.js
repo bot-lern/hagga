@@ -701,8 +701,8 @@ Asena.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
+Asena.addCommand({pattern: 'pokemon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.photooxy("https://photooxy.com/movies/make-pokemon-wallpaper-with-your-name-149.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -712,16 +712,16 @@ Asena.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tfire.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/pokeman.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/pokeman.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-Asena.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
+Asena.addCommand({pattern: 'dragonmetal ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.photooxy("https://photooxy.com/other-design/create-dark-metal-text-with-special-logo-160.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -731,8 +731,8 @@ Asena.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/hp.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/dragonmetal.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/dragonmetal.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
