@@ -579,7 +579,7 @@ Asena.addCommand({pattern: 'rosegold ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'avatargold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'transformer ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -589,7 +589,7 @@ Asena.addCommand({pattern: 'avatargold ?(.*)', fromMe: wk, dontAddCommandList: t
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-avatar-gold-online-956.html",
+    jessisapi.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html",
         [`${match[1]}`]
         ).then(async (data) => { 
           try { 
@@ -599,8 +599,8 @@ Asena.addCommand({pattern: 'avatargold ?(.*)', fromMe: wk, dontAddCommandList: t
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/avatargold.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/avatargold.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/transformer.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/transformer.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
