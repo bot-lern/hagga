@@ -241,8 +241,8 @@ RAVANA.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-RAVANA.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html",
+RAVANA.addCommand({pattern: '123glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -252,16 +252,16 @@ RAVANA.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/123g.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/123g.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-RAVANA.addCommand({pattern: 'future ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.textpro("https://textpro.me/neon-text-effect-online-879.html",
+RAVANA.addCommand({pattern: 'berry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.textpro("https://textpro.me/create-berry-text-effect-online-free-1033.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -271,8 +271,8 @@ RAVANA.addCommand({pattern: 'future ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon2.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/berry.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/berry.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
