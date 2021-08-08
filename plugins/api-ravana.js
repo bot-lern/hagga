@@ -233,7 +233,7 @@ Asena.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/wolf.jpg', async() => {                          
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/thunder.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/thunder.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
