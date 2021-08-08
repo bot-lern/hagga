@@ -776,8 +776,8 @@ RAVANA.addCommand({pattern: 'pokemon ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-RAVANA.addCommand({pattern: 'dragonmetal ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.photooxy("https://photooxy.com/other-design/create-dark-metal-text-with-special-logo-160.html",
+RAVANA.addCommand({pattern: 'mw ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/create-a-wolf-metal-text-effect-365.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -787,8 +787,8 @@ RAVANA.addCommand({pattern: 'dragonmetal ?(.*)', fromMe: wk, dontAddCommandList:
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/dragonmetal.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/dragonmetal.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/mw.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/mw.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
