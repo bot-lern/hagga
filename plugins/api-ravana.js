@@ -24,7 +24,7 @@ if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-Asena.addCommand({pattern: 'txttoimg$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+Asena.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -158,7 +158,7 @@ Asena.addCommand({pattern: 'txttoimg$', fromMe: wk, desc: desc_msg}, (async (mes
         command_cmd + '```.avengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '*.avengers Ra;One*\n\n' +
         command_cmd + '```.graf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '*.graf pinky;Ravana*\n\n' +
         command_cmd + '```.2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '*.2graf pinky;Ravana*\n\n' +       
-        command_cmd + '```.lion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '*.lion pinky;Ravana*\n\n' +
+        command_cmd + '```.rosegold``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '*.lion pinky;Ravana*\n\n' +
         command_cmd + '```.ice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '*.ice Ravana*\n\n' +
         command_cmd + '```.space``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '*.space Ra;One*\n\n' +
         command_cmd + '```.smoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '*.smoke Ravana*\n\n' + // Thanks for @Unique_hunter for base.
@@ -551,7 +551,7 @@ Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'rosegold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -561,7 +561,7 @@ Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, 
         topText = match[1];
         bottomText = 'ㅤ';
     }
-    jessisapi.textpro("https://textpro.me/create-lion-logo-mascot-online-938.html",
+    jessisapi.textpro("https://textpro.me/text-logo-3d-metal-rose-gold-945.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -571,16 +571,16 @@ Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, 
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/lion.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/lion.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/rosegold.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/rosegold.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
           } 
     });
 }));
-Asena.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.textpro("https://textpro.me/neon-text-effect-online-963.html",
+Asena.addCommand({pattern: 'avatargold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.textpro("https://textpro.me/create-avatar-gold-online-956.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -590,8 +590,8 @@ Asena.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon3.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon3.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/avatargold.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/avatargold.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
