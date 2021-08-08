@@ -1,6 +1,6 @@
 const jessisapi = require('api-jessi'); // Import NPM Package
 
-const Asena = require('../events');
+const RAVANA = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -24,7 +24,7 @@ if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-Asena.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -175,7 +175,7 @@ Asena.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (messag
         command_cmd + '```.dota``` \n' + desc_cmd + t33 + '_\n' + usage_cmd + '*.dota Ravana*\n\n'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
-Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -194,7 +194,7 @@ Asena.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -213,7 +213,7 @@ Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -241,7 +241,7 @@ Asena.addCommand({pattern: 'thunder ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/create-a-futuristic-technology-neon-light-text-effect-1006.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -260,7 +260,7 @@ Asena.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}, 
           } 
     });
 }));
-Asena.addCommand({pattern: 'future ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'future ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/neon-text-effect-online-879.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -279,7 +279,7 @@ Asena.addCommand({pattern: 'future ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-Asena.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/thunder-text-effect-online-881.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -298,7 +298,7 @@ Asena.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/create-logo-joker-online-934.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -317,7 +317,7 @@ Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -345,7 +345,7 @@ Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/advanced-glow-text-effect-873.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -364,7 +364,7 @@ Asena.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/bokeh-text-effect-876.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -383,7 +383,7 @@ Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'greenhorror ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'greenhorror ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -411,7 +411,7 @@ Asena.addCommand({pattern: 'greenhorror ?(.*)', fromMe: wk, dontAddCommandList: 
           } 
     });
 }));
-Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -439,7 +439,7 @@ Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: '3dneon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: '3dneon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -467,7 +467,7 @@ Asena.addCommand({pattern: '3dneon ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-Asena.addCommand({pattern: 'metalgalaxy ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'metalgalaxy ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -495,7 +495,7 @@ Asena.addCommand({pattern: 'metalgalaxy ?(.*)', fromMe: wk, dontAddCommandList: 
           } 
     });
 }));
-Asena.addCommand({pattern: 'metalsilver ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'metalsilver ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -523,7 +523,7 @@ Asena.addCommand({pattern: 'metalsilver ?(.*)', fromMe: wk, dontAddCommandList: 
           } 
     });
 }));
-Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -551,7 +551,7 @@ Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'rosegold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'rosegold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -579,7 +579,7 @@ Asena.addCommand({pattern: 'rosegold ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'transformer ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'transformer ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -607,7 +607,7 @@ Asena.addCommand({pattern: 'transformer ?(.*)', fromMe: wk, dontAddCommandList: 
           } 
     });
 }));
-Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.textpro("https://textpro.me/ice-cold-text-effect-862.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -626,7 +626,7 @@ Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (
           } 
     });
 }));
-Asena.addCommand({pattern: 'luxurymetel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'luxurymetel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -654,7 +654,7 @@ Asena.addCommand({pattern: 'luxurymetel ?(.*)', fromMe: wk, dontAddCommandList: 
           } 
     });
 }));
-Asena.addCommand({pattern: 'mtg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'mtg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/other-design/create-metallic-text-glow-online-188.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -673,7 +673,7 @@ Asena.addCommand({pattern: 'mtg ?(.*)', fromMe: wk, dontAddCommandList: true}, (
           } 
     });
 }));
-Asena.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -701,7 +701,7 @@ Asena.addCommand({pattern: 'camarica ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'pokemon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'pokemon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/movies/make-pokemon-wallpaper-with-your-name-149.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -720,7 +720,7 @@ Asena.addCommand({pattern: 'pokemon ?(.*)', fromMe: wk, dontAddCommandList: true
           } 
     });
 }));
-Asena.addCommand({pattern: 'dragonmetal ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'dragonmetal ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/other-design/create-dark-metal-text-with-special-logo-160.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -739,7 +739,7 @@ Asena.addCommand({pattern: 'dragonmetal ?(.*)', fromMe: wk, dontAddCommandList: 
           } 
     });
 }));
-Asena.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -758,7 +758,7 @@ Asena.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true},
           } 
     });
 }));
-Asena.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
         `${match[1]}`
         ).then(async (data) => { 
@@ -777,7 +777,7 @@ Asena.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: tru
           } 
     });
 }));
-Asena.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     jessisapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
         `${match[1]}`
         ).then(async (data) => { 
