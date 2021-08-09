@@ -146,9 +146,9 @@ RAVANA.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (messa
         command_cmd + '```.thunder``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '*.thunder Ra;One*\n\n' +
         command_cmd + '```.123glitch```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '*.123glitch Ravana*\n\n' +
         command_cmd + '```.berry``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '*.berry Ravana*\n\n' +
-        command_cmd + '```.light``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '*.light Ravana*\n\n' +
+        command_cmd + '```.peridot``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '*.light Ravana*\n\n' +
         command_cmd + '```.joker``` \n' + desc_cmd + t27 + '_\n' + usage_cmd + '*.joker Ravana*\n\n' +
-        command_cmd + '```.ninja``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '*.ninja Ravana*\n\n' +
+        command_cmd + '```.honey``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '*.ninja Ravana*\n\n' +
         command_cmd + '```.glitter``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '*.glitter Ravana*\n\n' +
         command_cmd + '```.bokeh``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '*.bokeh Ra;One*\n\n' +
         command_cmd + '```.greenhorror``` \n' + desc_cmd + t8 + '_\n' + usage_cmd + '*.greenhorror Ravana*\n\n' +
@@ -171,7 +171,9 @@ RAVANA.addCommand({pattern: 'upack$', fromMe: wk, desc: desc_msg}, (async (messa
         command_cmd + '```.criholy``` \n' + desc_cmd + t30 + '_\n' + usage_cmd + '*.criholy Ravana*\n\n'+
         command_cmd + '```.reacloud``` \n' + desc_cmd + t31 + '_\n' + usage_cmd + '*.reacloud Ravanan\n'+
         command_cmd + '```.catwindow``` \n' + desc_cmd + t32 + '_\n' + usage_cmd + '*.catwindow Ravana*\n\n'+
-        command_cmd + '```.scc``` \n' + desc_cmd + t34 + '_\n' + usage_cmd + '*.scc Ravana*\n\n'+
+        command_cmd + '```.sci``` \n' + desc_cmd + t34 + '_\n' + usage_cmd + '*.scc Ravana*\n\n'+
+        command_cmd + '```.halloween``` \n' + desc_cmd + t34 + '_\n' + usage_cmd + '*.scc Ravana*\n\n'+
+        command_cmd + '```.glue``` \n' + desc_cmd + t34 + '_\n' + usage_cmd + '*.scc Ravana*\n\n'+
         command_cmd + '```.cup``` \n' + desc_cmd + t33 + '_\n' + usage_cmd + '*.cup Ravana*\n\n'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
@@ -279,8 +281,8 @@ RAVANA.addCommand({pattern: 'berry ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-RAVANA.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
-    jessisapi.textpro("https://textpro.me/thunder-text-effect-online-881.html",
+RAVANA.addCommand({pattern: 'peridot ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    jessisapi.textpro("https://textpro.me/peridot-stone-text-effect-916.html",
         `${match[1]}`
         ).then(async (data) => { 
           try { 
@@ -291,7 +293,7 @@ RAVANA.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true}
               };
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/li.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/li.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/peridot.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -317,7 +319,7 @@ RAVANA.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true}
           } 
     });
 }));
-RAVANA.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+RAVANA.addCommand({pattern: 'honey ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
     if (match[1].includes(';')) {
         var split = match[1].split(';');
@@ -327,7 +329,7 @@ RAVANA.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}
         topText = match[1];
         bottomText = '';
     }
-    jessisapi.textpro("https://textpro.me/create-ninja-logo-online-935.html",
+    jessisapi.textpro("https://textpro.me/honey-text-effect-868.html",
         [`${topText}`, `${bottomText}`]
         ).then(async (data) => { 
           try { 
@@ -337,8 +339,8 @@ RAVANA.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ninja.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ninja.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/honey.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/honey.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
@@ -634,7 +636,7 @@ RAVANA.addCommand({pattern: 'luxurymetel ?(.*)', fromMe: wk, dontAddCommandList:
         bottomText = split[1];
     } else {
         topText = match[1];
-        bottomText = 'ㅤ';
+        bottomText = '';
     }
     jessisapi.textpro("https://textpro.me/color-full-luxury-metal-text-effect-969.html",
         [`${topText}`, `${bottomText}`]
@@ -947,6 +949,90 @@ RAVANA.addCommand({pattern: 'scc ?(.*)', fromMe: wk, dontAddCommandList: true}, 
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/scc.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/scc.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+RAVANA.addCommand({pattern: 'halloween ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = '';
+    }
+    jessisapi.textpro("https://textpro.me/halloween-fire-text-effect-940.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/halloween.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/halloween.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+RAVANA.addCommand({pattern: 'glue ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = '';
+    }
+    jessisapi.textpro("https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/glue.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glue.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+RAVANA.addCommand({pattern: 'sci ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = '';
+    }
+    jessisapi.textpro("https://textpro.me/sci-fi-text-effect-855.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/sci.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/sci.jpg'), MessageType.image, { caption: Config.CAPTION_KEY})
               })
           } catch(err) { 
               console.log(err)
