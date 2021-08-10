@@ -9,7 +9,7 @@ const axios = require('axios');
 const Config = require('../config');
 const NEED ="*Need some Word😊*"
 const MEM = "Make memes your own\nඔබගේම මිම් සාදාගැනීමට "
- const code = "╔════════════════════╗\n║   💢 *RAVANA Memems* 💢\n║\n║\n╠═══ *🇱🇰commands🇱🇰*\n║\n╠══ *.what*\n╠══ *.sad*\n╠══ *.drink*\n╠══ *.hacker*\n╠══ *.angry*\n╠══ *.doge*\n╠══ *.cunning*\n║\n╚════════════════════╝"
+ const code = "╔════════════════════╗\n║   💢 *RAVANA Memems* 💢\n║\n║\n╠═══ *🇱🇰commands🇱🇰*\n║\n╠══ *.what*\n╠══ *.sad*\n╠══ *.drink*\n╠══ *.hacker*\n╠══ *.angry*\n╠══ *.doge*\n╠══ *.cunning*\n╠══ *.pusa*\n║\n╚════════════════════╝"
 
 if (Config.WORKTYPE == 'private') {
     
@@ -89,6 +89,18 @@ if (Config.WORKTYPE == 'private') {
   await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by RAVANA' })
 
 }));
+ 
+ RAVANA.addCommand({ pattern: 'pusa ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+  if (match[1] === '') return await message.sendMessage(NEED);
+
+  var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${encodeURIComponent(match[1])}&img=https://telegra.ph/file/150660c80f16193cb5f47.jpg/revision/latest/top-crop/width/450/height/500?cb=20190205115000`, { responseType: 'arraybuffer' })
+
+  await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by RAVANA' })
+
+}));
+
+}
 
 
 }
@@ -168,6 +180,16 @@ else if (Config.WORKTYPE == 'public') {
   if (match[1] === '') return await message.sendMessage(NEED);
 
   var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${encodeURIComponent(match[1])}&img=https://telegra.ph/file/056658ff0c671f101c661.jpg/revision/latest/top-crop/width/450/height/500?cb=20190205115000`, { responseType: 'arraybuffer' })
+
+  await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by RAVANA' })
+
+}));
+ 
+ RAVANA.addCommand({ pattern: 'pusa ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+  if (match[1] === '') return await message.sendMessage(NEED);
+
+  var ttinullimage = await axios.get(`https://docs-jojo.herokuapp.com/api/meme-gen?top=%20&bottom=${encodeURIComponent(match[1])}&img=https://telegra.ph/file/150660c80f16193cb5f47.jpg/revision/latest/top-crop/width/450/height/500?cb=20190205115000`, { responseType: 'arraybuffer' })
 
   await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by RAVANA' })
 
