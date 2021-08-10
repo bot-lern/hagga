@@ -102,9 +102,6 @@ if (Config.WORKTYPE == 'private') {
 
 }
 
-
-}
-
 else if (Config.WORKTYPE == 'public') {
     
         RAVANA.addCommand({pattern: 'meem', fromMe: false, desc: MEM,}, (async (message, match) => {
