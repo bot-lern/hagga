@@ -426,7 +426,7 @@ if (config.WORKTYPE == 'private') {
             });
     }));
 
-else if (config.WORKTYPE == 'public') {
+else (config.WORKTYPE == 'public') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
