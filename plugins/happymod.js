@@ -14,7 +14,7 @@ const Lang = Language.getString('weather');
 
 Asena.addCommand({pattern: 'happymod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
-	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
+	const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1fd8f49191915fef`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
