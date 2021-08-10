@@ -496,6 +496,11 @@
             "QR_DESC": "Converts the given text into a qr code image."
             
         },
+        "mediafire":{
+            "NEED": "ලින්ක් එකක් අවශ්‍යයි.",
+            "DOWN": "```Downloading...```",
+            "NOT": "```සොයාගත නොහැක!```"
+        },
         "whois": {
             "PL_DESC": "Displays metadata data of group or person.",
             "SUB": "*Group Name:* ",
