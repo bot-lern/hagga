@@ -1759,4 +1759,4 @@ Asena.addCMD({pattern: 'asong ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (asy
             );
         }
     }));
-}
+
