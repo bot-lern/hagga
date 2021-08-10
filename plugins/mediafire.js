@@ -28,7 +28,7 @@ Asena.addCommand({ pattern: 'mediafire ?(.*)', fromMe: false, dontAddCommandList
               responseType: 'arraybuffer',
             })
 
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.apk, {
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.png, {
               caption: 'apk downloader\n RAVANA| ©2021🇱🇰',
             })
           })
