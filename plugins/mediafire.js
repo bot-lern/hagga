@@ -28,8 +28,8 @@ Asena.addCommand({ pattern: 'mediafire ?(.*)', fromMe: false, dontAddCommandList
               responseType: 'arraybuffer',
             })
 
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'musicly id tiktok downloader\n RAVANA| ©2021🇱🇰',
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.apk, {
+              caption: 'apk downloader\n RAVANA| ©2021🇱🇰',
             })
           })
           .catch(
